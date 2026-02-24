@@ -36,9 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             echo json_encode(['success' => false, 'message' => 'Cédula no encontrada.']);
         }
-    } catch (PDOException $e) {
+    } catch (Exception $e) {
         error_log("Login Cliente error: " . $e->getMessage());
-        echo json_encode(['success' => false, 'message' => 'Error de conexión al servidor.']);
+        echo json_encode(['success' => false, 'message' => $e->getMessage()]);
     }
 } else {
     echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
