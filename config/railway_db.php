@@ -1,12 +1,11 @@
 <?php
 // config/railway_db.php
-// Configuración para la base de datos externa en Railway
-
-define('RW_HOST', 'shinkansen.proxy.rlwy.net');
-define('RW_PORT', '49579'); // Usando el puerto del proxy provisto
-define('RW_USER', 'root');
-define('RW_PASS', 'EHClsjxUYgaZfndzmSwGgekxJlAVImdv');
-define('RW_NAME', 'railway');
+// Configuración para la base de datos externa en Railway, con soporte para variables de entorno
+define('RW_HOST', getenv('MYSQLHOST') ?: 'shinkansen.proxy.rlwy.net');
+define('RW_PORT', getenv('MYSQLPORT') ?: '49579');
+define('RW_USER', getenv('MYSQLUSER') ?: 'root');
+define('RW_PASS', getenv('MYSQLPASSWORD') ?: 'EHClsjxUYgaZfndzmSwGgekxJlAVImdv');
+define('RW_NAME', getenv('MYSQLDATABASE') ?: 'railway');
 
 function getRailwayDB()
 {
