@@ -13,6 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         $db = getRailwayDB();
+        if (!$db) {
+            echo json_encode(['success' => false, 'message' => 'Error de conexión a la base de datos externa.']);
+            exit;
+        }
         // Para el portal de clientes, el "login" es solo la cédula por simplicidad según el requerimiento.
         $stmt = $db->prepare("SELECT id, nombres, apellidos, saldo_actual, activo FROM clientes WHERE cedula = ?");
         $stmt->execute([$cedula]);
