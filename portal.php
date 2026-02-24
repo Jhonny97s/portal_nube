@@ -11,6 +11,10 @@ if (!isset($_SESSION['cliente_id'])) {
 $cliente_id = $_SESSION['cliente_id'];
 $db = getRailwayDB();
 
+if (!$db) {
+    die("<h1>Servicio Temporalmente No Disponible.</h1><p>No se pudo conectar a la base de datos externa.</p>");
+}
+
 // Obtener datos frescos del cliente
 $stmt = $db->prepare("SELECT c.*, g.nombre as grupo_nombre FROM clientes c LEFT JOIN grupos g ON c.grupo_id = g.id WHERE c.id = ?");
 $stmt->execute([$cliente_id]);
