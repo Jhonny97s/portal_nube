@@ -54,11 +54,10 @@ if (isset($_SESSION['cliente_id'])) {
             <div class="col-md-5">
                 <div class="card card-login p-4 p-sm-5">
                     <div class="text-center mb-4">
-                        <div class="bg-success text-white rounded-circle d-inline-flex mb-3 align-items-center justify-content-center shadow"
-                            style="width: 80px; height: 80px;">
-                            <i class="fa-solid fa-utensils fa-3x"></i>
+                        <div class="text-center mb-3">
+                            <img src="assets/img/logo.jpg" alt="Madelu Comida Casera" style="max-height: 120px; width: auto; object-fit: contain;">
                         </div>
-                        <h2 class="fw-bold text-gray-800">NUTRIPLAN</h2>
+                        <h2 class="fw-bold text-gray-800">MADELU COMIDA CASERA</h2>
                         <p class="text-muted">Consulta tu saldo de manera rápida y segura.</p>
                     </div>
 

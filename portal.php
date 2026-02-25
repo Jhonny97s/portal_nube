@@ -50,7 +50,7 @@ $gastado_mes = $stmtTotal->fetch()['gastado'] ?? 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil - NUTRIPLAN</title>
+    <title>Mi Perfil - MADELU COMIDA CASERA</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -127,8 +127,8 @@ $gastado_mes = $stmtTotal->fetch()['gastado'] ?? 0;
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-success shadow-sm py-3 sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="fa-solid fa-utensils me-2"></i> NUTRIPLAN
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="assets/img/logo.jpg" alt="Logo" style="height: 30px; margin-right: 10px; border-radius: 4px; background: white; padding: 2px;"> MADELU COMIDA CASERA
             </a>
             <div class="d-flex align-items-center">
                 <span class="text-white fw-bold me-3 d-none d-sm-block">
