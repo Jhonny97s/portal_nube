@@ -128,7 +128,9 @@ $gastado_mes = $stmtTotal->fetch()['gastado'] ?? 0;
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-success shadow-sm py-3 sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-                <img src="assets/img/logo.jpg" alt="Logo" style="height: 30px; margin-right: 10px; border-radius: 4px; background: white; padding: 2px;"> MADELU COMIDA CASERA
+                <img src="assets/img/logo.jpg" alt="Logo"
+                    style="height: 30px; margin-right: 10px; border-radius: 4px; background: white; padding: 2px;">
+                MADELU COMIDA CASERA
             </a>
             <div class="d-flex align-items-center">
                 <span class="text-white fw-bold me-3 d-none d-sm-block">
@@ -161,6 +163,20 @@ $gastado_mes = $stmtTotal->fetch()['gastado'] ?? 0;
                                 <?php echo htmlspecialchars($cliente['grupo_nombre']); ?>
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- QR Code Card -->
+                <div class="card card-custom mb-4 text-center">
+                    <div class="card-body p-4 bg-white rounded-4 shadow-sm">
+                        <h6 class="text-uppercase text-muted fw-bold mb-3"><i class="fa-solid fa-qrcode me-2"></i> Mi
+                            Código QR</h6>
+                        <p class="small text-muted mb-3">Escanea este código en el punto de venta para registrar tu
+                            consumo.</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<?php echo urlencode($cliente['cedula']); ?>"
+                            alt="QR Code" class="img-fluid border p-2" style="max-width: 200px; border-radius: 15px;">
+                        <h4 class="mt-3 fw-bold text-gray-800 mb-0"><?php echo htmlspecialchars($cliente['cedula']); ?>
+                        </h4>
                     </div>
                 </div>
 
